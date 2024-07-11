@@ -1,48 +1,18 @@
 {
-  "name": "test-project",
-  "version": "1.0.0",
+  "name": "dealer-mobile",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
+    "ca": "gaia ca",
+    "bootstrap": "yarn --frozen-lockfile",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "upload": "gulp upload-oss",
-    "lint:stage": "node pre-commit.js && gaia lint",
     "lint": "gaia --env eslint --ext .js,.vue src --config .eslintrc.js --ignore-path .eslintignore",
     "lint:fix": "npm run lint -- --fix",
-    "analyze": "cross-env VUE_APP_ANALYZE=1 npm_config_report=true gaia build prod"
+    "analyze": "cross-env F6_RUN_ENV=prod NODE_ENV=production VUE_APP_ANALYZE=1 npm_config_report=true vue-cli-service build"
   },
   "dependencies": {
-    "@f6/lube": "2.4.1",
-    "@f6/sensors": "3.4.1",
-    "axios": "^0.21.1",
-    "core-js": "3.6.5",
-    "vue": "2.6.14",
-    "vue-router": "3.5.2",
-    "vuex": "3.6.2"
-  },
-  "devDependencies": {
-    "@f6/aviator-ui": "^1.1.17",
-    "@f6/gaia": "1.7.7",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "gulp": "^4.0.2",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0",
-    "style-resources-loader": "^1.4.1",
-    "vue-template-compiler": "2.6.14",
-    "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2",
-    "webpack-merge": "^4.2.1"
+    "@f6/gaia": "~1.15.0",
+    "@f6/lube": "~2.5.2"
   }
 }
