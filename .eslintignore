@@ -1,0 +1,13 @@
+/build/
+/dist/
+dist_bak
+/src/library/
+sync
+coverage
+node_modules
+pre-commit.js
+vue.config.js
+output.js
+README.md
+/static/
+public
