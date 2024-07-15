@@ -1,5 +1,5 @@
 {
-  "name": "dealer-mobile",
+  "name": "lube",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,12 +7,19 @@
     "bootstrap": "yarn --frozen-lockfile",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "gaia --env eslint --ext .js,.vue src --config .eslintrc.js --ignore-path .eslintignore",
+    "lint": "gaia --env eslint --ext .ts,.vue, test --config .eslintrc.js --ignore-path .eslintignore",
     "lint:fix": "npm run lint -- --fix",
-    "analyze": "cross-env F6_RUN_ENV=prod NODE_ENV=production VUE_APP_ANALYZE=1 npm_config_report=true vue-cli-service build"
+    "analyze": "cross-env F6_RUN_ENV=prod NODE_ENV=production VUE_APP_ANALYZE=1 npm_config_report=true vue-cli-service build",
+    "ts-node": "ts-node"
   },
   "dependencies": {
     "@f6/gaia": "~1.15.0",
     "@f6/lube": "~2.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
   }
 }
