@@ -1,5 +1,5 @@
 /**
- * KV 工具类：
+ * KV 工具类：将原始集合中的数据项映射为 kv对
  */
 export default class KV<K, V> {
     private _key: K
